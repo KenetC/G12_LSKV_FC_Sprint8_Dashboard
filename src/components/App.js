@@ -1,13 +1,17 @@
+import React from 'react';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Category from './components/Category';
+
+import SideBar from './SideBar.js';
+
 
 function App() {
   return (
-    <div className="App">
-      <button className='btn btn'>Que onda loco</button>
-    </div>
+    <React.Fragment>
+      <div id="wrapper">
+          <SideBar />
+        </div>
+    </React.Fragment>
   );
 }
 

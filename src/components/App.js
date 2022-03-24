@@ -1,6 +1,12 @@
+<<<<<<< HEAD:src/App.js
 import logo from './logo.svg';
 import './App.css';
 import Category from './components/Category'
+=======
+import logo from '../logo.svg';
+import '../App.css';
+
+>>>>>>> 0995bafa1ce832f43722614adb314ce08c7e9950:src/components/App.js
 function App() {
   return (
     <div className="App">

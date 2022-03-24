@@ -1,6 +1,7 @@
 import '../App.css';
-
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Category from './components/Category';
 
 function App() {
   return (

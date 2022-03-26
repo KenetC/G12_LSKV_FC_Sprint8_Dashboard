@@ -10,6 +10,9 @@
 .color-letter{
     text-decoration: none;
     color: var(--rojo);
-    text-align: center;
+}
+
+.pr-10{
+    padding-right: 10px;
 }
 

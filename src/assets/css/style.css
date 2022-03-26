@@ -1,0 +1,15 @@
+:root{
+    --rojo: #BA135D;
+    --rosa: #F8E2CF;
+    --letra_gris: #666;
+}
+.bg-colorPri{
+    background: var(--rosa);
+}
+
+.color-letter{
+    text-decoration: none;
+    color: var(--rojo);
+    text-align: center;
+}
+

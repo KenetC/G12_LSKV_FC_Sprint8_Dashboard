@@ -1,59 +1,27 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect} from 'react';
 
-class Category extends Component {
+function Category(){
+	const [cate, setCate] = useState({data:"Data Default"});
+    useEffect(() => {
+		// Peticion Asincrónica al montarse el componente
+		const endpoint = 'https://g12-sprint8-lskv.herokuapp.com/api/products';
+        const url = 'https://www.omdbapi.com/?s=comedy&apikey=e24ea09d'
+		fetch(endpoint)
+			.then(response => response.json())
+			.then(data => {
+                setCate(data.meta.countByCategory) 
+			})
+			.catch(error => console.log(error))
+	}, [])
 
-    constructor(props){
-        super(props)
-        this.state = {
-            d:""
-        }
-    }
-    apiCategory(url,mostratCategory){
-       fetch(url,{
-            'mode': 'no-cors',
-        })
-       .then(res=> {return res.json()})
-       .then(data=> {
-           mostratCategory(data);
-        })
-       .catch(error=> console.log(error));
-    }
+    console.log('cate', cate)
 
-
-    componentDidMount(){
-        console.log("Entre")
-        this.apiCategory('https://g12-sprint8-lskv.herokuapp.com/api/products',
-        this.mostrarCategory)
-    }
-
-    mostrarCategory=(data)=>{
-        console.log('data');
-        console.log(data)
-        this.setState({
-            d: data.meta.countByCategory
-        })
-    }
-
-    componentDidUpdate(){
-        console.log("Me actualice")
-    }
-
-    render(){
-        console.log(this.state.d)
-        let valores; 
-        if (this.state.d = ''){ 
-            valores = <p>cargando</p>;
-        }else{ 
-            valores = <p>Blusas: {this.state.d.Blusas}</p>
-        }
-        return(
-            <div>
-                <p>Estos son los valores:</p>
-                {valores}
-            </div> 
-        )
-    } 
+    return(
+        <div>
+            <p>Es son los valor:</p>
+            <p>Blu: {cate.Blusas}</p>
+        </div> 
+    )
 }
 
 export default Category;

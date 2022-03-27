@@ -14,7 +14,7 @@ function SideBar(){
             </ul>
             <Switch>
                 <Route path="/category">
-                    <PruebaAPI />
+                    <Category />
                 </Route>
                 <Route path="/hola">
                     <Hola />

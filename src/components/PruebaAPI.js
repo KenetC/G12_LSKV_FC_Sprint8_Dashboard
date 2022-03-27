@@ -9,7 +9,7 @@ function Category(){
 		fetch(endpoint)
 			.then(response => response.json())
 			.then(data => {
-                setCate(data.Search[0]) 
+                setCate(data.meta.countByCategory) 
 			})
 			.catch(error => console.log(error))
 	}, [])

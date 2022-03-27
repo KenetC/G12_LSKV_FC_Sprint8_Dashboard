@@ -1,15 +1,15 @@
 import React from 'react';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom';
-import SideBar from './SideBar.js';
+import SideBar from './SideBar';
+
 
 function App() {
   return (
     <React.Fragment>
       <div id="wrapper">
-        <SideBar />
-      </div>
+        <SideBar/>
+        </div>
     </React.Fragment>
   );
 }

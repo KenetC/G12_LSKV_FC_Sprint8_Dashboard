@@ -9,9 +9,9 @@ function App() {
     <React.Fragment>
       <div id="wrapper">
         <SideBar/>
-        </div>
+      </div>
     </React.Fragment>
-  );
+  )
 }
-
 export default App;
+      

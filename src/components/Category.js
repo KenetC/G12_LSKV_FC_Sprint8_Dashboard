@@ -20,15 +20,17 @@ function Category(){
     return(
         <div className="hola" class="container">
          
-				<table class="table table-striped">
+				<table class="table  table-bordered table-danger table-hover table-sm">
 					<thead>
 						<tr>
-							<th>Categorias</th>
+							<th>Categorias:</th>
+                            <th>Cantidad:</th>
 						</tr>
 					</thead>
 					<tbody>
                     <tr>
                       <th scope="row">Blusas</th>
+                      
                         <td>{cate.Blusas}</td>
                      </tr>
                      <tr>
@@ -63,7 +65,7 @@ function Category(){
                         </tbody>
                         
 
-                               </table>
+                 </table>
 
 
           

@@ -14,40 +14,57 @@ function Products(){
 			.catch(error => console.log(error))
 	}, [])
     return(
-        <div>
-        {}
-        { products.length > 0 && products.map(prod=>{
-            let to = '/products/'+ prod.id
-            return(
-                <div>
-                    <p>id: {prod.id}</p>
-                    <p>name: {prod.name}</p>
-                    <p>price: {prod.price}</p>
-                    <p>category: {prod.category}</p>
-                    <p>Style: {prod.style}</p>
-                    <p>Colores:</p>
-                    {}
-                    {
-                    prod.color.length > 0 && prod.color.map(color=>{
-                        return(
-                            <p> {color} </p>
-                        )
-                    })
-                    }
-                    <p>Talles:</p>
-                    {}
-                    {
-                        prod.size.length > 0 && prod.size.map(size=>{
-                            return(
-                                <p>{size}</p>
-                            )
-                        })
-                    }
-                    <Link to={to}><span>Detalle de producto</span></Link>
-                </div>
-            )
-        })
-        }
+        <div className='container'>
+            <table class="table  table-bordered table-danger table-hover table-sm">
+                <thead>
+                    <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Style</th>
+                    <th scope="col">Colours</th>
+                    <th scope="col">Sizes</th>
+                    <th scope="col">Detalle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                { products.length > 0 && products.map(prod=>{
+                    let to = '/products/'+ prod.id
+                    return(
+                            <tr>
+                                <th scope="row">{prod.id}</th>
+                                <td>{prod.name}</td>
+                                <td>{prod.price}</td>
+                                <td>{prod.category}</td>
+                                <td>{prod.style}</td>
+                                <td>
+                                    {
+                                    prod.color.length > 0 && prod.color.map(color=>{
+                                            return(
+                                                <li className='list-unstyled'>{color}</li>
+                                            )
+                                        })
+                                    }
+                                </td>
+                                <td>
+                                {
+                                    prod.size.length > 0 && prod.size.map(size=>{
+                                        return(
+                                            <li className='list-unstyled'>{size}</li>
+                                        )
+                                    })
+                                }
+                                </td>
+                                <td><Link to={to}><span>Detalle de producto</span></Link></td>
+                            </tr>
+                            
+                    )
+                
+                })
+            }
+            </tbody>
+            </table>
         <Switch>
         {
             products.length > 0 && products.map(prod=>{

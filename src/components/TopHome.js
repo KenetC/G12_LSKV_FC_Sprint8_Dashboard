@@ -9,7 +9,7 @@ function TopHome(){
         fetch("https://g12-sprint8-lskv.herokuapp.com/api/users")
         .then(res => res.json())
 		.then(data =>{
-            console.log(data)
+            
             setUsers(data.data.list)
 		})
 		.catch(error => console.log(error))
@@ -34,7 +34,7 @@ function TopHome(){
 		fetch(endpoint)
 			.then(response => response.json())
 			.then(data => {
-                console.log(data)
+                
                 setCate(data.meta.countByCategory) 
 			})
 			.catch(error => console.log(error))

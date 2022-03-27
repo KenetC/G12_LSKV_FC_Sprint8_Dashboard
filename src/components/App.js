@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Category from './Category';
+import SideBar from './SideBar';
 
 
 
@@ -9,9 +9,8 @@ function App() {
   return (
     <React.Fragment>
       <div id="wrapper">
-       <p>Hola</p>
-        <Category/>
-        </div>
+        <SideBar/>
+      </div>
     </React.Fragment>
   );
 }

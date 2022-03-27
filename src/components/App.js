@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SideBar from './SideBar';
 
 
-
 function App() {
   return (
     <React.Fragment>
@@ -12,7 +11,7 @@ function App() {
         <SideBar/>
       </div>
     </React.Fragment>
-  );
+  )
 }
-
 export default App;
+      

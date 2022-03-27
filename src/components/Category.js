@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-
+import '../App.css';
 function Category(){
 	const [cate, setCate] = useState({data:"Data Default"});
     useEffect(() => {
@@ -18,16 +18,58 @@ function Category(){
     console.log('cate', cate)
 
     return(
-        <div>
-            <p>Los valores de:</p>
-            <p>Blusas: {cate.Blusas}</p>
-            <p>Remeras: {cate.Remeras}</p>
-            <p>Vestidos: {cate.Vestidos}</p>
-            <p>Monos: {cate.Monos}</p>
-            <p>Shorts: {cate.Shorts}</p>
-            <p>Faldas: {cate.Faldas}</p>
-            <p>Jeans: {cate.Jeans}</p>
-            <p>Pantalones: {cate.Pantalones}</p>
+        <div className="hola" class="container">
+         
+				<table class="table  table-bordered table-danger table-hover table-sm">
+					<thead>
+						<tr>
+							<th>Categorias:</th>
+                            <th>Cantidad:</th>
+						</tr>
+					</thead>
+					<tbody>
+                    <tr>
+                      <th scope="row">Blusas</th>
+                      
+                        <td>{cate.Blusas}</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">Remeras</th>
+                       <td>{cate.Remeras}</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">Vestidos</th>
+                       <td>{cate.Vestidos}</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">Monos</th>
+                       <td>{cate.Monos}</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">Shorts</th>
+                       <td>{cate.Shorts}</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">Faldas</th>
+                       <td>{cate.Faldas}</td>
+                     </tr>
+                     <tr>
+                       <th scope="row">Jeans</th>
+                       <td>{cate.Jeans}</td>
+                     </tr>
+
+                     <tr>
+                       <th scope="row">Pantalones</th>
+                       <td>{cate.Pantalones}</td>
+                     </tr>
+                        </tbody>
+                        
+
+                 </table>
+
+
+          
+            
         </div> 
     )
 }

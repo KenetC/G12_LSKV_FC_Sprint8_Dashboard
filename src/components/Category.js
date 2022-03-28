@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import '../App.css';
 function Category(){
-	const [cate, setCate] = useState({data:"Data Default"});
+	const [cate, setCate] = useState();
     useEffect(() => {
 		
 		const endpoint = 'https://g12-sprint8-lskv.herokuapp.com/api/products';

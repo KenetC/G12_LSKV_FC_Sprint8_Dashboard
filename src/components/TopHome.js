@@ -15,7 +15,7 @@ function TopHome(){
 		.catch(error => console.log(error))
     })
 
-    const [products, setproducts] = useState({data:"Data Default"});
+    const [products, setproducts] = useState([]);
     useEffect(() => {
 		const endpoint = `https://g12-sprint8-lskv.herokuapp.com/api/products`;
 		fetch(endpoint)
@@ -26,7 +26,7 @@ function TopHome(){
 			.catch(error => console.log(error))
 	}, [])
 
-    const [cate, setCate] = useState({data:"Data Default"});
+    const [cate, setCate] = useState([]);
     useEffect(() => {
 		
 		const endpoint = 'https://g12-sprint8-lskv.herokuapp.com/api/products';

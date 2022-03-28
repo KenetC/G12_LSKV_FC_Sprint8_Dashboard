@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {Link, Route, Switch,NavLink} from 'react-router-dom';
 import ProdDetail from './prodDetail';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import CardProd from './CardProd';
 
 function Products(){
 	const [products, setproducts] = useState({data:"Data Default"});
@@ -16,17 +16,25 @@ function Products(){
 	}, [])
     return(
         <React.Fragment>
-        <h1>Total de usuarios: {products.length}</h1>
-        <div className='container-fluid'>
-            <div class="card" >
-            <img src="..." class="card-img-top"></img>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="/" class="btn btn-primary">Go somewhere</a>
-                </div>
+            <h1>Total de productos: {products.length}</h1>
+        <div className='container'>
+            <div className='row'>
+                { products.length > 0 && products.map((prod,i)=>{
+                    return( <CardProd {...prod} key={i}/> )
+                })
+            }
             </div>
-        </div>
+        <Switch>
+        {
+            products.length > 0 && products.map(prod=>{
+                let to = `/products/${prod.id}}`;
+                return(
+                    <Route path={to}><ProdDetail/></Route>
+                )
+            })
+        }
+        </Switch>
+        </div> 
         </React.Fragment>
     )
 }

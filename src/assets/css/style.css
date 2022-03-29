@@ -16,3 +16,23 @@
     padding-right: 10px;
 }
 
+.margin{
+    margin: 15px
+}
+.mg{
+    margin-top:5px;
+    margin-left:15px;
+    width: 125px;
+}
+.table{
+   
+      color: #BA135D;
+      background-color:  #F8E2CF;
+        --letra_gris: #666;
+    }
+    
+.container{
+    margin: 10px;
+}
+    
+

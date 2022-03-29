@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import '../App.css';
+
 function Category(){
 	const [cate, setCate] = useState({data:"Data Default"});
     useEffect(() => {
@@ -18,49 +18,57 @@ function Category(){
     console.log('cate', cate)
 
     return(
-        <div className="container">
+        <div className="container" class="container">
                <div class="row">
-               <table class="table  table-bordered table-danger table-hover table-sm">
+               <table class="table  table-bordered  table-hover table-sm">
 					<thead>
 						<tr>
+              <th>ID:</th>
 							<th>Categorias:</th>
-                            <th>Cantidad:</th>
+              <th>Cantidad:</th>
+              
 						</tr>
 					</thead>
 					<tbody>
                     <tr>
-                      <th scope="row">Blusas</th>
-                      
-                        <td>{cate.Blusas}</td>
+                      <th scope="row">1</th>
+                      <td >Blusas</td>
+                      <td>{cate.Blusas}</td>
                      </tr>
                      <tr>
-                       <th scope="row">Remeras</th>
-                      
+                     <th scope="row">2</th>
+                       <td>Remeras</td>
                        <td>{cate.Remeras}</td>
                      </tr>
                      <tr>
-                       <th scope="row">Vestidos</th>
+                     <th scope="row">3</th>
+                       <td>Vestidos</td>
                        <td>{cate.Vestidos}</td>
                      </tr>
                      <tr>
-                       <th scope="row">Monos</th>
+                     <th scope="row">4</th>
+                       <td>Monos</td>
                        <td>{cate.Monos}</td>
                      </tr>
                      <tr>
-                       <th scope="row">Shorts</th>
+                     <th scope="row">5</th>
+                       <td>Shorts</td>
                        <td>{cate.Shorts}</td>
                      </tr>
                      <tr>
-                       <th scope="row">Faldas</th>
+                     <th scope="row">6</th>
+                       <td>Faldas</td>
                        <td>{cate.Faldas}</td>
                      </tr>
                      <tr>
-                       <th scope="row">Jeans</th>
+                     <th scope="row">7</th>
+                       <td>Jeans</td>
                        <td>{cate.Jeans}</td>
                      </tr>
 
                      <tr>
-                       <th scope="row">Pantalones</th>
+                     <th scope="row">8</th>
+                       <td>Pantalones</td>
                        <td>{cate.Pantalones}</td>
                      </tr>
                         </tbody>
@@ -70,12 +78,17 @@ function Category(){
 
 
                </div>
-				
 
 
-          
-            
+               
+           
+
+
+
+
         </div> 
+
+
     )
 }
 

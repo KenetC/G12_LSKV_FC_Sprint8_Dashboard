@@ -1,11 +1,15 @@
 import React from 'react';
-import image from '../assets/images/Logo4.svg';
+import TopHome from './TopHome';
+import ContentHome from './ContentHome';
+
+
 
 
 function home(){
     return(
         <React.Fragment>
-            <img className="w-100" src={image} alt="LSKV"/>
+            <TopHome/>
+            
         </React.Fragment>
     )
 }

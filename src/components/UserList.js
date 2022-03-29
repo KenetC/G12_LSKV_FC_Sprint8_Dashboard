@@ -19,9 +19,8 @@ function UserList(){
     return(
         <React.Fragment>
 
-            <h1>Total de usuarios: {users.length}</h1>
 
-            <div className="container">
+            <div className="container mt-3">
               <div className="row">
                 {
                   users.length > 0 && users.map((user,i)=>{
@@ -29,7 +28,6 @@ function UserList(){
 
                 })
                 }
-
               </div>
             </div>
             

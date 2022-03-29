@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
-import '../App.css';
+
 function Category(){
-	const [cate, setCate] = useState();
+	const [cate, setCate] = useState({data:"Data Default"});
     useEffect(() => {
 		
 		const endpoint = 'https://g12-sprint8-lskv.herokuapp.com/api/products';
@@ -18,9 +18,9 @@ function Category(){
     console.log('cate', cate)
 
     return(
-        <div className="hola" class="container">
+        <div className="container mt-3">
          
-				<table class="table  table-bordered table-danger table-hover table-sm">
+				<table className="table  table-bordered table-danger table-hover table-sm">
 					<thead>
 						<tr>
 							<th>Categorias:</th>

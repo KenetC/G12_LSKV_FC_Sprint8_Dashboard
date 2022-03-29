@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
 import '../App.css';
+
  function CardProd(prod){    
     let to = '/products/'+ prod.id;
     return(
@@ -7,7 +8,9 @@ import '../App.css';
             <div className="row bg-colorPri rounded m-2 align-items-center">
                 <div className="col-3">
                     <Link to={to}>
-                        <img className="img-prod" src={`${process.env.PUBLIC_URL}/images/products/${prod.img}`}alt="Img no encontrada"/> 
+                        <img className="img-prod" 
+                        src={`${process.env.PUBLIC_URL}/images/users/default.png`}
+                        alt="Img no encontrada"/> 
                     </Link>
                 </div>
                 <div className="col-4">

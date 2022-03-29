@@ -25,7 +25,6 @@ function UserList(){
                 {
                   users.length > 0 && users.map((user,i)=>{
                     return<CardUser {...user} key ={i}/>
-
                 })
                 }
               </div>

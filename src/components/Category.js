@@ -18,9 +18,9 @@ function Category(){
     console.log('cate', cate)
 
     return(
-        <div className="hola" class="container">
-         
-				<table class="table  table-bordered table-danger table-hover table-sm">
+        <div className="container">
+               <div class="row">
+               <table class="table  table-bordered table-danger table-hover table-sm">
 					<thead>
 						<tr>
 							<th>Categorias:</th>
@@ -35,6 +35,7 @@ function Category(){
                      </tr>
                      <tr>
                        <th scope="row">Remeras</th>
+                      
                        <td>{cate.Remeras}</td>
                      </tr>
                      <tr>
@@ -66,6 +67,10 @@ function Category(){
                         
 
                  </table>
+
+
+               </div>
+				
 
 
           

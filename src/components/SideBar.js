@@ -15,7 +15,7 @@ function SideBar(){
             <div className='row'>
                 <div className='col-1 col-lg-2 bg-colorPri'>
                     <ul className='navbar-nav sidebar accordion' id="accordionSidebar">
-                        <a  href="/">
+                        <a  href="https://g12-sprint8-lskv.herokuapp.com/">
                             <div className="sidebar-brand-icon">
                                 <img className="w-100" src={image} alt="LSKV"/>
                             </div>

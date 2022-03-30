@@ -9,7 +9,7 @@ function home(){
     return(
         <React.Fragment>
             <TopHome/>
-            
+            {/* <ContentHome/> */}
         </React.Fragment>
     )
 }

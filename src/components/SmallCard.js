@@ -1,7 +1,7 @@
 import React from "react";
 function SmallCard(props){
     return(
-        <div className="col-md-3 mb-3">
+        <div className="col-md-4 mb-3">
             <div className={`card border-${props.color} shadow h-100 py-2 rounded-left border-right`}>
                 <div className="card-body">
                     <div className="row no-gutters align-items-center">

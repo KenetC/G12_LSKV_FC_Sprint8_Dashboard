@@ -9,12 +9,12 @@ function UserList(){
     useEffect(()=>{
         fetch("https://g12-sprint8-lskv.herokuapp.com/api/users")
         .then(res => res.json())
-		.then(data =>{
-            
-            setUsers(data.data.list)
-		})
-		.catch(error => console.log(error))
-    })
+		    .then(data =>{
+          console.log(data.data.list)
+          setUsers(data.data.list)
+		    })
+		    .catch(error => console.log(error))
+        },[])
 
     return(
         <React.Fragment>

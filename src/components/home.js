@@ -1,6 +1,7 @@
 import React from 'react';
 import {useEffect,useState} from "react"
 import TopHome from './TopHome';
+import Carrousel from './Carrousel';
 
 function Home(){
     let [users,setUsers] = useState([]);
@@ -27,9 +28,12 @@ function Home(){
     return(
         <React.Fragment>
             <TopHome/>
+            <Carrousel/>
             <div className='container'>
                 <div className='row'>
+                    
                     <div className="card bg-colorPri color-letter col-12 col-lg-6">
+                        <h4 className='text-center'>Último producto</h4>
                         <div className="card-header bg-colorPri color-letter">
                         ID: {product.id}
                         </div>
@@ -77,6 +81,7 @@ function Home(){
                         </div>
                         <div className="col-12 col-lg-6">
                                 <div className="row bg-colorPri rounded m-2 align-items-center justify-content-between">
+                                <h4 className='text-center color-letter mt-1'>Último usuario</h4>
                                     <div className="col-3"><img className="rounded-circle" width="155px" height="155px" src={`${process.env.PUBLIC_URL}/images/users/${users && users.avatar }`} alt="User"/></div>
                                     <div className="col-7 p-2 color-letter">
                                         <h6 className='font-weight-bold'>

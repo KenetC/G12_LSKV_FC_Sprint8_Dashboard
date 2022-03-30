@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 function ProdDetail() {
     let [product, setproduct] = useState([]);
-    useEffect(() => { 
+    useEffect(() => {
         const id = window.location.href.slice(window.location.href.length-4,window.location.href.length);
         function volverNumeros(str){   
-            let s = true; 
+            let s = true;
             let n = 1222;
-            for(let i = 0; i < 4 && s ;i++){ 
+            for(let i = 0; i < 4 && s ;i++){
                 if(!isNaN(Number(str.slice(i,4)))) s = false;
                 n = Number(str.slice(i,4));
             }

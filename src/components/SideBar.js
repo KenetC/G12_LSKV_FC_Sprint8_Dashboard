@@ -1,7 +1,7 @@
 import {Link, Route, Switch} from 'react-router-dom';
 import React from 'react';
 import image from '../assets/images/Logo4.svg';
-import Home from './home';
+import Home from './Home';
 import Category from './Category';
 import Products from './Products'
 import ProdDetail from './prodDetail';

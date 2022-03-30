@@ -6,7 +6,7 @@ import CardProd from './CardProd';
 function Products(){
 	const [products, setproducts] = useState({data:"Data Default"});
     useEffect(() => {
-		const endpoint = `https://g12-sprint8-lskv.herokuapp.com/api/products`;
+		const endpoint = `api/products`;
 		fetch(endpoint)
 			.then(response => response.json())
 			.then(data => {

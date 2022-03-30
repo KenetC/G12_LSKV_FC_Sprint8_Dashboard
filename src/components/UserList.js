@@ -7,14 +7,14 @@ function UserList(){
     const[users,setUsers] = useState([]);
 
     useEffect(()=>{
-        fetch("https://g12-sprint8-lskv.herokuapp.com/api/users")
-        .then(res => res.json())
+        fetch("api/users")
+        .then(res =>{ return res.json()})
 		    .then(data =>{
           console.log(data.data.list)
           setUsers(data.data.list)
 		    })
 		    .catch(error => console.log(error))
-        },[])
+        },[users])
 
     return(
         <React.Fragment>

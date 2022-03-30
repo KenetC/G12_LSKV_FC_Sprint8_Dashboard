@@ -4,7 +4,7 @@ function Category(){
 	const [cate, setCate] = useState({data:"Data Default"});
     useEffect(() => {
 		
-		const endpoint = 'https://g12-sprint8-lskv.herokuapp.com/api/products';
+		const endpoint = 'api/products';
      
 		fetch(endpoint)
 			.then(response => response.json())

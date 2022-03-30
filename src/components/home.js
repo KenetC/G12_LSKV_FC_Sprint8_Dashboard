@@ -8,7 +8,7 @@ function Home(){
     let [product,setProd] = useState([]);
 
     useEffect(()=>{
-        fetch("https://g12-sprint8-lskv.herokuapp.com/api/users")
+        fetch("api/users")
         .then(res => res.json())
 		.then(data =>{
             setUsers( data.data.list[data.data.list.length-1] );
@@ -17,7 +17,7 @@ function Home(){
     })
 
     useEffect(()=>{
-        fetch("https://g12-sprint8-lskv.herokuapp.com/api/products")
+        fetch("api/products")
         .then(res => res.json())
 		.then(data =>{
             setProd( data.data.list[data.data.list.length-1] );

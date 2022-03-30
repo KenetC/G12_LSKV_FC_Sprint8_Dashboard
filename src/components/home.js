@@ -1,17 +1,10 @@
 import React from 'react';
 import TopHome from './TopHome';
-import ContentHome from './ContentHome';
 
+import {useEffect,useState} from 'react';
 
-
-
-function home(){
-    return(
-        <React.Fragment>
-            <TopHome/>
-            {/* <ContentHome/> */}
-        </React.Fragment>
-    )
+function Home(){
+    
 }
 
-export default home;
+export default Home;

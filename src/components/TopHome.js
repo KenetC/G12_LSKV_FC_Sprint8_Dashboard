@@ -6,7 +6,7 @@ function TopHome(){
     const[users,setUsers] = useState([]);
 
     useEffect(()=>{
-        fetch("https://g12-sprint8-lskv.herokuapp.com/api/users")
+        fetch("api/users")
         .then(res => res.json())
 		.then(data =>{
             
@@ -17,7 +17,7 @@ function TopHome(){
 
     const [products, setproducts] = useState([]);
     useEffect(() => {
-		const endpoint = `https://g12-sprint8-lskv.herokuapp.com/api/products`;
+		const endpoint = `api/products`;
 		fetch(endpoint)
 			.then(response => response.json())
 			.then(data => {
@@ -29,7 +29,7 @@ function TopHome(){
     const [cate, setCate] = useState([]);
     useEffect(() => {
 		
-		const endpoint = 'https://g12-sprint8-lskv.herokuapp.com/api/products';
+		const endpoint = 'api/products';
      
 		fetch(endpoint)
 			.then(response => response.json())

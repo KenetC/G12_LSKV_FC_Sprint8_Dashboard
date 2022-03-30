@@ -7,7 +7,7 @@ function Category(){
 		const endpoint = 'api/products';
      
 		fetch(endpoint)
-			.then(response => response.json())
+			.then(response => {return response.json()})
 			.then(data => {
                 console.log(data)
                 setCate(data.meta.countByCategory) 

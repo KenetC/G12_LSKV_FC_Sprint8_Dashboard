@@ -85,6 +85,8 @@ function SideBar(){
                                 </div>   
                             </Link>
                         </li>
+
+                        <hr className="sidebar-divider"/>
                         <li className=''>   
                             <Link className='color-letter' to='/styles'>
                                 <div className='row'>

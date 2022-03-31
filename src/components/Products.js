@@ -8,7 +8,7 @@ function Products(){
     useEffect(() => {
 		const endpoint = `api/products`;
 		fetch(endpoint)
-			.then(response => response.json())
+			.then(response => {return response.json()})
 			.then(data => {
                 setproducts(data.data.list); 
 			})
@@ -16,10 +16,10 @@ function Products(){
 	}, [])
     return(
         <React.Fragment>
-            <h1>Total de productos: {products.length}</h1>
         <div className='container'>
             <div className='row'>
-                { products.length > 0 && products.map((prod,i)=>{
+            { 
+                products.length > 0 && products.map((prod,i)=>{
                     return( <CardProd {...prod} key={i}/> )
                 })
             }

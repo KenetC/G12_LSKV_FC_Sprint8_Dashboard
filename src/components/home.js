@@ -9,7 +9,7 @@ function Home(){
 
     useEffect(()=>{
         fetch("api/users")
-        .then(res => res.json())
+        .then(res => {return res.json()})
 		.then(data =>{
             setUsers( data.data.list[data.data.list.length-1] );
 		})

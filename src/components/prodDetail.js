@@ -13,10 +13,10 @@ function ProdDetail() {
             }
             return n
         }
-		const endpoint = `https://g12-sprint8-lskv.herokuapp.com/api/products/${volverNumeros(id)}`;
+		const endpoint = `api/products/${volverNumeros(id)}`;
         console.log(endpoint)
 		fetch(endpoint)
-			.then(response => response.json())
+			.then(response => {return response.json()})
 			.then(data => {
                 setproduct(data.data);
 			})

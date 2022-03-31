@@ -33,51 +33,54 @@ function Home(){
                 <div className='row'>
                     
                     <div className="card bg-colorPri color-letter col-12 col-lg-6">
-                        <h4 className='text-center'>Último producto</h4>
-                        <div className="card-header bg-colorPri color-letter">
-                        ID: {product.id}
-                        </div>
-                        <img src={`${process.env.PUBLIC_URL}/images/users/default.png`} className="card-img-top mg" alt="Img no encontrada"></img>
-                        <div className="card-body bg-colorPri color-letter">
-                            <h5 className="card-title">{product.name}</h5>
-                            <p className="card-text">{product.description}</p>
-                            <ul className="list-group list-group-flush bg-colorPri color-letter">
-                                <li className="list-group-item bg-colorPri color-letter">
-                                    {
-                                        users && `${users.name} ${users.lastName}`.substring(30)
-                                    }
-                                </li>
-                                <li className="list-group-item bg-colorPri color-letter">{product.price}$</li>
-                                <li className="list-group-item bg-colorPri color-letter">
-                                <div className="row align-items-start">
-                                    <div className='col'>Category: {` ${product.category}`} </div>
-                                    <div className='col'>Style:{` ${product.style}`}</div>
-                                </div>
-                                </li>
-                                <li className="list-group-item bg-colorPri color-letter">
+                        <div className='m-2'>
+                            <h4 className='text-center'>Último producto</h4>
+                            <div className="card-header bg-colorPri color-letter">
+                            ID: {product.id}
+                            </div>
+                            <img src={`${process.env.PUBLIC_URL}/images/users/default.png`} className="card-img-top mg" alt="Img no encontrada"></img>
+                            <div className="card-body bg-colorPri color-letter">
+                                <h5 className="card-title">{product.name}</h5>
+                                <p className="card-text">{product.description}</p>
+                                <ul className="list-group list-group-flush bg-colorPri color-letter">
+                                    <li className="list-group-item bg-colorPri color-letter">
+                                        {
+                                            users && `${users.name} ${users.lastName}`.substring(30)
+                                        }
+                                    </li>
+                                    <li className="list-group-item bg-colorPri color-letter">{product.price}$</li>
+                                    <li className="list-group-item bg-colorPri color-letter">
+                                    <div className="row align-items-start">
+                                        <div className='col'>Category: {` ${product.category}`} </div>
+                                        <div className='col'>Style:{` ${product.style}`}</div>
+                                    </div>
+                                    </li>
+                                    <li className="list-group-item bg-colorPri color-letter">
+                                        <div className="row align-items-start">
+                                            {
+                                                product.color && product.color.map(color=>{
+                                                    return(
+                                                        <div className='col'>
+                                                            <img src={`${process.env.PUBLIC_URL}/images/colores/${color}.jpg`} className="img-color"/> - {color}  
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    </li>
+                                    <li className="list-group-item bg-colorPri color-letter">
                                     <div className="row align-items-start">
                                         {
-                                            product.color && product.color.map(color=>{
-                                                return(
-                                                    <div className='col'>
-                                                        <img src={`${process.env.PUBLIC_URL}/images/colores/${color}.jpg`} className="img-color"/> - {color}  
-                                                    </div>
-                                                )
-                                            })
+                                            product.size && product.size.map(size=>{
+                                                return(<div className='col'>{size}</div>)
+                                            }) 
                                         }
                                     </div>
-                                </li>
-                                <li className="list-group-item bg-colorPri color-letter">
-                                <div className="row align-items-start">
-                                    {
-                                        product.size && product.size.map(size=>{
-                                            return(<div className='col'>{size}</div>)
-                                        }) 
-                                    }
-                                </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+                        
                         </div>
                         <div className="col-12 col-lg-6">
                                 <div className="row bg-colorPri rounded m-2 align-items-center justify-content-between">

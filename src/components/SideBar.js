@@ -97,7 +97,7 @@ function SideBar(){
                                     </svg>
                                     </div>
                                     <div className='col-10'>
-                                        <span className='d-none d-lg-block'>  Listado - Styles</span>
+                                        <span className='d-none d-lg-block'>  Listado - Estilos</span>
                                     </div>
                                 </div>   
                             </Link>

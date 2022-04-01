@@ -13,12 +13,14 @@ function ProdDetail() {
             }
             return n
         }
-		const endpoint = `api/products/${volverNumeros(id)}`;
+		const endpoint = `/api/products/${volverNumeros(id)}`;
+        
         console.log(endpoint)
 		fetch(endpoint)
 			.then(response => {return response.json()})
 			.then(data => {
                 setproduct(data.data);
+                console.log(product)
 			})
 			.catch(error => console.log(error))
 	    })

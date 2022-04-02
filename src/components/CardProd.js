@@ -9,7 +9,7 @@ import '../App.css';
                 <div className="col-3">
                     <Link to={to}>
                         <img className="img-prod" 
-                        src={`${process.env.PUBLIC_URL}/images/users/default.png`}
+                        src={`${process.env.PUBLIC_URL}/images/products/${prod.img}`}
                         alt="Img no encontrada"/> 
                     </Link>
                 </div>

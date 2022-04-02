@@ -24,11 +24,12 @@ function Home(){
 		})
 		.catch(error => console.log(error))
     })
+    
 
     return(
         <React.Fragment>
             <TopHome/>
-            <Carrousel/>
+            {/* <Carrousel/> */}
             <div className='container'>
                 <div className='row'>
                     
@@ -38,7 +39,7 @@ function Home(){
                             <div className="card-header bg-colorPri color-letter">
                             ID: {product.id}
                             </div>
-                            <img src={`${process.env.PUBLIC_URL}/images/users/default.png`} className="card-img-top mg" alt="Img no encontrada"></img>
+                            <img src={`${process.env.PUBLIC_URL}/images/products/${product.img}`} className="card-img-top mg" alt="Img no encontrada"></img>
                             <div className="card-body bg-colorPri color-letter">
                                 <h5 className="card-title">{product.name}</h5>
                                 <p className="card-text">{product.description}</p>

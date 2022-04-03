@@ -31,7 +31,7 @@ function ProdDetail() {
         <div className="card-header bg-colorPri color-letter">
         ID: {product.id}
         </div>
-        <img src={product.images && `${process.env.PUBLIC_URL,product.images[0]}`} className="card-img-top mg" alt="Img no encontrada"></img>
+        <img src={product.images && `${process.env.PUBLIC_URL,product.images[0]}`} className="card-img-top mg" alt="Img no encontrada"/>
         <div className="card-body bg-colorPri color-letter">
             <h5 className="card-title">{product.name}</h5>
             <p className="card-text">{product.description}</p>
